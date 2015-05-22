@@ -1,4 +1,4 @@
-# Coursera - Exploring Data Analysis - Assigment 2 - plot2
+# Coursera - Exploring Data Analysis - Assigment 2 - plot3
 
 # Question 3: Of the four types of sources indicated by the type (point, nonpoint, onroad, nonroad) variable, 
 # which of these four sources have seen decreases in emissions from 1999-2008 for Baltimore City? 
@@ -33,5 +33,6 @@ ggp <- ggplot(dataPM25Sub,aes(factor(year),Emissions/10^3,fill=type)) +
     facet_grid(.~type,scales = "free",space="free") + 
     labs(x="year", y=expression("Total PM"[2.5]*" Emission (10^3 Tons)")) + 
     labs(title=expression("Baltimore City PM"[2.5]*" Emissions per Year and Source Type"))
+print(ggp)
 dev.off()
-#print(ggp)
+
